@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Accordion from "./components/Accordion";
 
-function App() {
+export default function App() {
+  const accordionItems = [
+    {
+      title: "1.This is first item among all the might items",
+      content: "some mock content for this item.",
+    },
+    {
+      title: "2.This is second item among all the might items",
+      content: "some mock content for this item.",
+    },
+    {
+      title: "3.This is third item among all the might items",
+      content: "some mock content for this item.",
+    },
+    {
+      title: "4.This is fouth item among all the might items",
+      content: "some mock content for this item.",
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Accordion items={accordionItems} />
     </div>
   );
 }
-
-export default App;
